@@ -54,6 +54,8 @@ fun firstNegativeNumber(nums: IntArray, k: Int): IntArray {
                 deque.removeFirst()
             }
 
+            // If no negative number in the current window, add 0; otherwise, add the first
+            // negative.
             if (deque.isEmpty()) {
                 res.add(0)
             } else {

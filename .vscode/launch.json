@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "gradle",
+            "type": "java",
             "request": "launch",
             "name": "Run Kotlin with Gradle",
             "tasks": [
