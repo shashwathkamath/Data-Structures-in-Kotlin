@@ -7,5 +7,30 @@
  */
 fun firstNegativeNumber(nums: IntArray, k: Int): IntArray {
     // Todo: Implement it
-    return intArrayOf()
+    val output = mutableListOf<Int>()
+    var left = 0
+
+    for (right in nums.indices) {
+        println("Right pointer $right")
+        if (right - left + 1 == k) {
+            val negativeNumber = findFirstNegativeNumber(nums, left, right)
+            output.add(negativeNumber)
+            left++
+        }
+    }
+
+    return output.toIntArray()
+}
+
+fun findFirstNegativeNumber(nums: IntArray, left: Int, right: Int): Int {
+    var i = left
+    var j = right
+
+    while (i <= j) {
+        if (nums[i] < 0) {
+            return nums[i]
+        }
+        i++
+    }
+    return 0
 }
