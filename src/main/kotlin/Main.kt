@@ -19,8 +19,14 @@ fun main() {
     val count = countOccurrenceOfAnagrams(str, pattern)
     println("Number of anagrams inside the string ---> $count")
      */
-    val str = "eceba"
+
+    /*
+         val str = "eceba"
     val k = 2
     val res = lengthOfLongestSubstringKDistinct(str, k)
     println("lengthOfLongestSubstringKDistinct --> $res")
+      */
+    val str = "abcabcbb"
+    val res = lengthOfLongestSubstring(str)
+    println("lengthOfLongestSubstring ---> $res")
 }
