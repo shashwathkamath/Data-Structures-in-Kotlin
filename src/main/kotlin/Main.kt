@@ -1,9 +1,20 @@
 fun main() {
-    val nums = intArrayOf(12, -1, -7, 8, -15, 30, 16, 28)
+    val nums = intArrayOf(1, 3, -1, -3, 5, 3, 6, 7)
     val k = 3
 
     // first negative Number problem solution
-    val res = firstNegativeNumber(nums, k)
+    /*
+        val res = firstNegativeNumber(nums, k)
     println("size ${res.size}")
     res.forEach { println(it) }
+     */
+    /*
+        val res = maxOfAllSubarray(nums, k)
+    println("size ${res.size}")
+    res.forEach { println(it) }
+     */
+    val str = "aabaabaa"
+    val pattern = "aaba"
+    val count = countOccurrenceOfAnagrams(str, pattern)
+    println("Number of anagrams inside the string ---> $count")
 }
