@@ -26,7 +26,19 @@ fun main() {
     val res = lengthOfLongestSubstringKDistinct(str, k)
     println("lengthOfLongestSubstringKDistinct --> $res")
       */
-    val str = "abcabcbb"
+
+    /*
+          val str = "abcabcbb"
     val res = lengthOfLongestSubstring(str)
     println("lengthOfLongestSubstring ---> $res")
+      */
+
+    /*
+          val nums = intArrayOf(2, 3, 1, 2, 4, 3)
+    val res = minSubArrayLen(7, nums)
+    println("minSubArrayLen ---> $res")
+       */
+    val s = "pqpqps"
+    val count = countSubstringsWithExactlyKDistinct(s, 2)
+    println("Result Count ---> $count")
 }
