@@ -40,26 +40,23 @@ fun findFirstNegativeNumber(nums: IntArray, left: Int, right: Int): Int {
 */
 
 fun firstNegativeNumber(nums: IntArray, k: Int): IntArray {
-    var left = 0
     var res = mutableListOf<Int>()
-    var deque = ArrayDeque<Int>()
+    var left = 0
+    val deque = ArrayDeque<Int>()
 
     for (right in nums.indices) {
         if (nums[right] < 0) {
-            // tracking indices
             deque.add(right)
         }
         if (right - left + 1 == k) {
             while (deque.isNotEmpty() && deque.first() < left) {
                 deque.removeFirst()
             }
-
             if (deque.isEmpty()) {
                 res.add(0)
             } else {
                 res.add(nums[deque.first()])
             }
-            // Slide the window by moving left
             left++
         }
     }
