@@ -16,7 +16,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("MainKt") // Replace with your main class name
+    mainClass.set("LinkedListMainKt") // Replace with your main class name
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
