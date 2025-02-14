@@ -60,4 +60,8 @@ class LinkedList<T> {
             current = current.next
         }
     }
+
+    fun getHead(): Node<T>? {
+        return head
+    }
 }
