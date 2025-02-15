@@ -4,7 +4,7 @@ fun <T> middleNode(head: Node<T>?): Node<T>? {
 
     while (fast?.next != null) {
         slow = slow?.next
-        fast = fast?.next?.next
+        fast = fast.next?.next
     }
     println("Slow pointer $slow")
     return slow

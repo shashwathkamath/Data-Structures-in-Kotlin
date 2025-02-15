@@ -8,7 +8,9 @@ fun main() {
     list.append(50)
 
     val head = list.getHead()
+    removeNthFromEnd(head, 1)
+    list.printList()
     // val newHead = ReverseLinkedList(head)
-    middleNode(head)
+    // middleNode(head)
     // println("New head $middleNode")
 }
