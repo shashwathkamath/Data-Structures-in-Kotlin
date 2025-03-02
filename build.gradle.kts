@@ -12,11 +12,12 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 }
 
 application {
-    mainClass.set("MainKt") // Replace with your main class name
+    mainClass.set("LinkedListMainKt") // Replace with your main class name
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
