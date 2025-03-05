@@ -17,3 +17,25 @@ fun homomorphicStrings(s: String, t: String): Boolean {
     }
     return true
 }
+
+// pattern generation
+
+fun generatePattern(s: String): String {
+    val map = mutableMapOf<Char, Int>()
+    var seed = 0
+    var pattern = StringBuilder()
+
+    for (c in s) {
+        if (!map.containsKey(c)) {
+            seed++
+            map[c] = seed
+        }
+        pattern.append(map[c])
+    }
+    return pattern.toString()
+}
+
+fun homomorphicStringsPattern(s: String, t: String): Boolean {
+
+    return generatePattern(s) == generatePattern(t)
+}
