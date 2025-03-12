@@ -17,7 +17,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("MainKt") // Replace with your fully qualified main class name
+    mainClass.set("StackMainKt") // Replace with your fully qualified main class name
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
