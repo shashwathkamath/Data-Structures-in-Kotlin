@@ -2,11 +2,15 @@ package DataStructures.Stack.Medium
 
 import java.util.Stack
 
-fun evalRPN(tokens:Array<String>):Int{
-   val operators = mutableSetOf<String>("+","-","*","/")
+fun evalPN(tokens:Array<String>):Int{
+    println("Inside this method")
+    val operators = setOf("+","-","*","/")
     val st = Stack<Int>()
+    val n = tokens.size
 
-    for (token in tokens){
+    for (i in n-1..0){
+        println(i)
+        val token = tokens[i]
         if (token in operators){
             val secondOperand = st.pop()
             val firstOperand = st.pop()
@@ -23,5 +27,6 @@ fun evalRPN(tokens:Array<String>):Int{
             st.push(token.toInt())
         }
     }
+
     return if (st.isNotEmpty())st.peek() else 0
 }

@@ -1,14 +1,11 @@
 package DataStructures.Stack
 
-import DataStructures.Stack.Basics.Stack
+import DataStructures.Stack.Easy.reverseWords
 
-fun main(){
-    val st = Stack(3)
-    st.push(1)
-    st.push(4)
-    st.push(5)
-    st.pop()
-    st.push(7)
-    val topIndex = st.top()
-    println("Size of Stack --> ${st.size()}, topElement is $topIndex")
+fun main() {
+//    val exp = "3 + (1 + 2)"
+//    println("Result --> ${calculator(exp)}")
+
+    val str = " hello world "
+    println("REverse words -> ${reverseWords(str)}")
 }
