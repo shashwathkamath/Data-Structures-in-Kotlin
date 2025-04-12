@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun isPalindrome(head: ListNode?): Boolean {
     if (head == null || head.next == null) return true
 

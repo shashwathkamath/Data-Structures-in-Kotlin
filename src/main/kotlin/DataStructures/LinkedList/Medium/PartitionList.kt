@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun partition(head: ListNode?, x: Int): ListNode? {
     val lessHead = ListNode(0)
     var less: ListNode? = lessHead

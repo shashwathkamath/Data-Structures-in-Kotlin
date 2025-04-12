@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun reverseKGroup(head: ListNode?, k: Int): ListNode? {
     val dummy = ListNode(0)
     dummy.next = head

@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
     var a = headA
     var b = headB
