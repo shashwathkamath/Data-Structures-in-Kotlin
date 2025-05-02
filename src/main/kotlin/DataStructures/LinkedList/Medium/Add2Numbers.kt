@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
     val dummy: ListNode? = ListNode(0)
     var c1 = l1

@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
     // Mirei Yokoyama
     var f = list1

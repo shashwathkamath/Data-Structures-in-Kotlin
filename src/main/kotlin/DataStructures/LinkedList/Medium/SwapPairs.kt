@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun swapPairs(head: ListNode?): ListNode? {
     val dummy: ListNode? = ListNode(0)
     dummy?.next = head

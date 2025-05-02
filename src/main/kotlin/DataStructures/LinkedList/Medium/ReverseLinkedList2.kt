@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun reverseBetween(head: ListNode?, left: Int, right: Int): ListNode? {
     val dummy: ListNode? = ListNode(0)
     dummy?.next = head

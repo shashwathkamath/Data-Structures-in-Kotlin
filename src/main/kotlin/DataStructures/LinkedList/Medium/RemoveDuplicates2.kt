@@ -1,3 +1,5 @@
+import LinkedList.Utils.ListNode
+
 fun deleteDuplicates(head: ListNode?): ListNode? {
     val dummy: ListNode? = ListNode(0)
     dummy?.next = head
