@@ -1,4 +1,4 @@
-package DataStructures.Recurssion
+package Algorithms.Recurssion
 
 import java.util.*
 

@@ -1,4 +1,4 @@
-package DataStructures.Recurssion
+package Algorithms.Recurssion
 
 /**
  * This is headRecurssion. This means, recurssion will happen first and then processing will be done.
