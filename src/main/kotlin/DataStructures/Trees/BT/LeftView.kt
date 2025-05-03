@@ -6,7 +6,7 @@ fun leftView(root: TreeNode?): List<Int> {
     val res = mutableListOf<Int>()
     if (root == null) return res
     val queue = ArrayDeque<TreeNode>()
-    queue.addLast(root)
+    queue.add(root)
     while (queue.isNotEmpty()) {
         val size = queue.size
         for (i in 0 until size) {

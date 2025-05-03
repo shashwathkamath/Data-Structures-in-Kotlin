@@ -1,4 +1,4 @@
-package DataStructures.Recurssion
+package Algorithms.Recurssion
 
 class Solution1004 {
 
@@ -6,6 +6,6 @@ class Solution1004 {
         if (q.isEmpty()) return
         val n = q.removeFirst()
         recursivelyReverseAQueue(q)
-        q.addLast(n)
+        q.add(n)
     }
 }

@@ -1,4 +1,4 @@
-package DataStructures.Recurssion
+package Algorithms.Recurssion
 
 class Solution1005 {
     fun recursivelyFindTheNthFibonacciNumber(n: Int): Long {
