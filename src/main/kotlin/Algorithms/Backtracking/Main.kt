@@ -1,11 +1,11 @@
 package Algorithms.Backtracking
 
-import Algorithms.Backtracking.UncontrolledEnumeration.Solution78
+import Algorithms.Backtracking.UncontrolledEnumeration.Solution90
 
 
 fun main() {
 
-    val s = Solution78()
-    val nums = intArrayOf(1, 2, 3)
-    println(s.subsets(nums))
+    val s = Solution90()
+    val nums = intArrayOf(1, 2, 2)
+    println(s.subsetsWithDup(nums))
 }
