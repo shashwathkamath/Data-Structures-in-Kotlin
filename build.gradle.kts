@@ -15,7 +15,7 @@ dependencies {
 }
 
 application {
-    mainClass.set("Algorithms.Backtracking.MainKt") // Replace with your fully qualified main class name
+    mainClass.set("DataStructures.TwoPointers.MainKt") // Replace with your fully qualified main class name
 }
 
 java {
