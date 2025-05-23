@@ -1,4 +1,4 @@
-package Algorithms.BinarySearch
+package Algorithms.BinarySearch.Fundamentals
 
 class BinarySearchImpl {
 
@@ -18,4 +18,3 @@ class BinarySearchImpl {
         return -1
     }
 }
-
