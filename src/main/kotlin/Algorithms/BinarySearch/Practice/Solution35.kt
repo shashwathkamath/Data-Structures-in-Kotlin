@@ -1,4 +1,4 @@
-package Algorithms.BinarySearch.Fundamentals
+package Algorithms.BinarySearch.Practice
 
 class Solution35 {
     fun searchInsert(nums: IntArray, target: Int): Int {

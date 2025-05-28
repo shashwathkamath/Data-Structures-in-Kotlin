@@ -1,4 +1,4 @@
-package Algorithms.BinarySearch.Fundamentals
+package Algorithms.BinarySearch.Practice
 
 class Solution540 {
 
