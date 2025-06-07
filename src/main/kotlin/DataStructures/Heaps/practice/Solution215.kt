@@ -1,4 +1,4 @@
-package DataStructures.heaps.practice
+package DataStructures.Heaps.practice
 
 import java.util.*
 

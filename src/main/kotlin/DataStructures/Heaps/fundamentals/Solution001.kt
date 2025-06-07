@@ -1,4 +1,4 @@
-package DataStructures.heaps.fundamentals
+package DataStructures.Heaps.fundamentals
 
 import DataStructures.Trees.TreeNode
 
