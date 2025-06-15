@@ -1,8 +1,10 @@
+package Prep
+
 class Solution146(private val capacity: Int) {
 
-    private val head: Node? = Node(0, 0)
-    private val tail: Node? = Node(0, 0)
-    private val map = mutableMapOf<Int, Node>()
+    private val head: TNode? = TNode(0, 0)
+    private val tail: TNode? = TNode(0, 0)
+    private val map = mutableMapOf<Int, TNode>()
 
     init {
         head?.next = tail
@@ -10,49 +12,55 @@ class Solution146(private val capacity: Int) {
     }
 
     fun get(key: Int): Int {
-        val node = map[key] ?: return -1
-        removeNode(node)
+        val node = map[key]
+        if (node == null) return -1
         moveToFront(node)
         return node.data
     }
 
-    private fun moveToFront(node: Node) {
+    private fun moveToFront(node: TNode) {
+        removeNode(node)
+        addToFront(node)
+    }
+
+    private fun removeNode(node: TNode?) {
+        node?.prev?.next = node.next
+        node?.next?.prev = node.prev
+    }
+
+    private fun addToFront(node: TNode) {
         node.next = head?.next
         node.prev = head
         head?.next?.prev = node
         head?.next = node
     }
 
-    private fun removeNode(node: Node) {
-        node.prev?.next = node.next
-        node.next?.prev = node.prev
-    }
-
     fun put(key: Int, value: Int) {
-        val node = map[key]
-        if (node != null) {
+        if (map.contains(key)) {
+            val node = map[key]!!
             node.data = value
             moveToFront(node)
         } else {
             if (map.size == capacity) {
-                removeLast()
+                removeLastNode()
             }
-            val newNode = Node(value, key)
-            map[key] = newNode
-            moveToFront(newNode)
+            val node = TNode(key, value)
+            map[key] = node
+            moveToFront(node)
         }
     }
 
-    private fun removeLast() {
+    private fun removeLastNode() {
         val lastNode = tail?.prev
-        removeNode(lastNode!!)
-        map.remove(lastNode.key)
+        removeNode(lastNode)
+        map.remove(lastNode?.key)
     }
 
-    data class Node(
+    data class TNode(
+        val key: Int,
         var data: Int,
-        var key: Int,
-        var next: Node? = null,
-        var prev: Node? = null
+        var next: TNode? = null,
+        var prev: TNode? = null
     )
+
 }
