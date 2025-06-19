@@ -1,5 +1,7 @@
 package Prep
 
+import Prep.epam.Solution1
+
 fun main() {
 
     Solution1().twoSum(
