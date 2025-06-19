@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.9.0" // Kotlin plugin
+    kotlin("jvm") version "1.9.22" // Updated Kotlin version
     application // Application plugin for the 'run' task
 }
 
@@ -8,22 +8,31 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    google()
 }
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
-   // implementation("com.jakewharton.timber:timber:5.0.1")
 }
 
 application {
-    mainClass.set("StackMainKt") // Replace with your fully qualified main class name
+    mainClass.set("Algorithms.BinarySearch.MainKt") // Replace with your fully qualified main class name
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions.jvmTarget = "17" // Set your desired JVM target version
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs = listOf("-Xjsr305=strict")
+    }
 }
 
 tasks.withType<JavaCompile> {
