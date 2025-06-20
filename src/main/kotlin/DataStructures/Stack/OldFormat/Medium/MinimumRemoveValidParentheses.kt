@@ -1,4 +1,4 @@
-package DataStructures.Stack.Medium
+package DataStructures.Stack.OldFormat.Medium
 
 fun minRemoveToMakeValid(s: String): String {
     var result = removeParanthesis(s, '(', ')')

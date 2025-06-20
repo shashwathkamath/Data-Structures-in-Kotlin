@@ -1,4 +1,4 @@
-package DataStructures.Stack.Easy
+package DataStructures.Stack.OldFormat.Easy
 
 fun reverseString(s: CharArray): Unit {
     var left = 0

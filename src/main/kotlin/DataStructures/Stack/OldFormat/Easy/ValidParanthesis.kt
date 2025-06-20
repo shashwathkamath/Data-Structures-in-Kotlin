@@ -1,4 +1,4 @@
-package DataStructures.Stack.Easy
+package DataStructures.Stack.OldFormat.Easy
 
 import java.util.*
 

@@ -24,8 +24,8 @@ class Solution146(private val capacity: Int) {
     }
 
     private fun removeNode(node: TNode?) {
-        node?.prev?.next = node.next
-        node?.next?.prev = node.prev
+        node?.prev?.next = node!!.next
+        node?.next?.prev = node!!.prev
     }
 
     private fun addToFront(node: TNode) {

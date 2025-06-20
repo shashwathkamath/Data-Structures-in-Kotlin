@@ -1,26 +1,26 @@
-package DataStructures.Stack.Medium
+package DataStructures.Stack.OldFormat.Medium
 
-class Stack(private val capacity:Int) {
-   private val arr = IntArray(capacity)
+class Stack(private val capacity: Int) {
+    private val arr = IntArray(capacity)
     private var topIndex1 = -1
     private var topIndex2 = capacity
 
-    fun top1():Int{
-        if (topIndex1 == -1){
+    fun top1(): Int {
+        if (topIndex1 == -1) {
             return -1
         }
         return arr[topIndex1]
     }
 
-    fun top2():Int{
-        if (topIndex2 == -1){
+    fun top2(): Int {
+        if (topIndex2 == -1) {
             return -1
         }
         return arr[topIndex2]
     }
 
-    fun push1(element:Int):Boolean{
-        if (topIndex1 >= topIndex2){
+    fun push1(element: Int): Boolean {
+        if (topIndex1 >= topIndex2) {
             return false
         }
         topIndex1++
@@ -28,8 +28,8 @@ class Stack(private val capacity:Int) {
         return true
     }
 
-    fun push2(element:Int):Boolean{
-        if (topIndex2-1 <= topIndex1){
+    fun push2(element: Int): Boolean {
+        if (topIndex2 - 1 <= topIndex1) {
             return false
         }
         topIndex2--
@@ -37,8 +37,8 @@ class Stack(private val capacity:Int) {
         return true
     }
 
-    fun pop1():Int{
-        if (topIndex1 == -1){
+    fun pop1(): Int {
+        if (topIndex1 == -1) {
             return -1
         }
         val elementToRemove = arr[topIndex1]
@@ -46,8 +46,8 @@ class Stack(private val capacity:Int) {
         return elementToRemove
     }
 
-    fun pop2():Int{
-        if (topIndex2 == -1){
+    fun pop2(): Int {
+        if (topIndex2 == -1) {
             return -1
         }
         val elementToRemove = arr[topIndex2]

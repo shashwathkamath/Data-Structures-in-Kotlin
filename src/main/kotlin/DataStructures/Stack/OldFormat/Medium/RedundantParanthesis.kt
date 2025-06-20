@@ -1,4 +1,4 @@
-package DataStructures.Stack.Medium
+package DataStructures.Stack.OldFormat.Medium
 
 import java.util.Stack
 

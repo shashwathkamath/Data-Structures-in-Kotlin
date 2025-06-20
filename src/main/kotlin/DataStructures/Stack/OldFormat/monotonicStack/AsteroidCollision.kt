@@ -1,4 +1,4 @@
-package DataStructures.Stack.monotonicStack
+package DataStructures.Stack.OldFormat.monotonicStack
 
 import java.util.*
 import kotlin.math.abs
