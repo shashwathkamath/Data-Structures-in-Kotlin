@@ -1,4 +1,4 @@
-package Prep.easy
+package Prep.easy.Arrays
 
 class Solution36 {
 
