@@ -1,17 +1,19 @@
 fun main() {
-    val printer = SimplePrinter()
-    val advancedPrinter = AdvancedPrinter(printer)
-    advancedPrinter.print()
+
 }
 
-interface Printer {
-    fun print()
+interface Processor<Input, Output> {
+    fun process(input: Input): Output
 }
 
-class SimplePrinter : Printer {
-    override fun print() {
-        print("A simple printer is implemented")
+class StringToLengthProcessor : Processor<Int, String> {
+    override fun process(input: Int): String {
+        TODO("Not yet implemented")
     }
 }
 
-class AdvancedPrinter(printer: Printer) : Printer by printer
+class NumberToStringProcessor : Processor<String, Int> {
+    override fun process(input: String): Int {
+        TODO("Not yet implemented")
+    }
+}
