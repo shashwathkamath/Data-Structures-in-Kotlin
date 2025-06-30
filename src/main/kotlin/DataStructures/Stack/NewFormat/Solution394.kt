@@ -1,34 +1,31 @@
 package DataStructures.Stack.NewFormat
 
 class Solution394 {
+    //"3[a2[c]]"
 
     fun decodeString(s: String): String {
-        val st = ArrayDeque<Any>()
-        var currString = StringBuilder()
+        val st = ArrayDeque<Pair<Int, StringBuilder>>()
         var currNum = 0
+        var currString = StringBuilder()
 
-        for (char in s) {
+        for (c in s) {
             when {
-                char.isDigit() -> {
-                    currNum = currNum * 10 + char.code
+                c.isDigit() -> {
+                    currNum = currNum * 10 + (c - '0')
                 }
 
-                char == '[' -> {
-                    st.addLast(currNum)
-                    st.addLast(currString.toString())
+                c == '[' -> {
+                    st.addLast(Pair(currNum, currString))
                     currNum = 0
                     currString = StringBuilder()
                 }
 
-                char == ']' -> {
-                    val str = st.removeLast() as String
-                    val num = st.removeLast() as Int
-                    currString = StringBuilder(str).append(currString.toString().repeat(num))
+                c == ']' -> {
+                    val (num, prevString) = st.removeLast()
+                    currString = StringBuilder(prevString).append(currString.toString().repeat(num))
                 }
 
-                else -> {
-                    currString.append(char)
-                }
+                else -> currString.append(c)
             }
         }
 
