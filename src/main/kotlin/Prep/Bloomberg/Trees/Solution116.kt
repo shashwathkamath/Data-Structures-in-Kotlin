@@ -18,11 +18,13 @@ class Solution116 {
         connectLevel(root.left, root.right)
         return root
     }
+
+    class Node(var `val`: Int) {
+        var left: Node? = null
+        var right: Node? = null
+        var next: Node? = null
+    }
 }
 
-class Node(var `val`: Int) {
-    var left: Node? = null
-    var right: Node? = null
-    var next: Node? = null
-}
+
 

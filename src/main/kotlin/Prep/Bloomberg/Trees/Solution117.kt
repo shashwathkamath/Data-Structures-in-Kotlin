@@ -7,8 +7,8 @@ class Solution117 {
 
         fun connectLevel(left: Node?, right: Node?) {
 
-            left.next = right
-            connectLevel(left.left, left.right)
+            left?.next = right
+            connectLevel(left?.left, left?.right)
 
 
         }
