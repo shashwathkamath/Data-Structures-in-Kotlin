@@ -1,4 +1,4 @@
-package Prep.leetcode150
+package Prep.leetcode150.ArrayStrings
 
 class Solution121 {
     fun maxProfit(prices: IntArray): Int {

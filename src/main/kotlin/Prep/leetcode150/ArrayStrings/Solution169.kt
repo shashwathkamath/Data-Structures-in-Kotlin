@@ -1,4 +1,4 @@
-package Prep.leetcode150
+package Prep.leetcode150.ArrayStrings
 
 class Solution169 {
 
