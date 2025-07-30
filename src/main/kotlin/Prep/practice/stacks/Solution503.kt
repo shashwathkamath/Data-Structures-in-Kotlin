@@ -1,4 +1,4 @@
-package Prep.practice
+package Prep.practice.stacks
 
 class Solution503 {
 
