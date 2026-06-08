@@ -1,6 +1,6 @@
 {
   "description": "Tracker for the nightly TUF (takeUforward) Striver Graph Series practice. currentIndex points to the NEXT problem to generate. The scheduled task reads this file, creates a stub .kt file for problems[currentIndex], then increments currentIndex and writes the file back.",
-  "currentIndex": 5,
+  "currentIndex": 6,
   "problems": [
     { "day": 1,  "title": "Number of Provinces",                                            "topic": "Traversal / Connected Components", "difficulty": "Medium" },
     { "day": 2,  "title": "BFS Traversal of Graph",                                         "topic": "Traversal", "difficulty": "Easy" },

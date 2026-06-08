@@ -44,8 +44,33 @@ package Graphs.DailyChallenge
 class Day04_NumberOfIslands {
 
     fun numIslands(grid: Array<CharArray>): Int {
-        TODO("Write your solution here")
+        val r = grid.size
+        val c = grid[0].size
+        var res = 0
+
+        fun helper(i: Int, j: Int) {
+            if (i < 0 || j < 0 || i >= r || j >= c || grid[i][j] != '1') {
+                return
+            }
+            grid[i][j] = '0'
+            helper(i + 1, j)
+            helper(i - 1, j)
+            helper(i, j + 1)
+            helper(i, j - 1)
+        }
+
+        for (i in 0 until r) {
+            for (j in 0 until c) {
+                if (grid[i][j] == '1') {
+                    helper(i, j)
+                    res++
+                }
+            }
+        }
+
+        return res
     }
+
 }
 
 fun main() {
